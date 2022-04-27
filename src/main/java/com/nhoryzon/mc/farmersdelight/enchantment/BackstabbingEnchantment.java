@@ -1,6 +1,7 @@
 package com.nhoryzon.mc.farmersdelight.enchantment;
 
 import com.nhoryzon.mc.farmersdelight.item.KnifeItem;
+import com.nhoryzon.mc.farmersdelight.registry.EnchantmentsRegistry;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
@@ -11,12 +12,7 @@ import net.minecraft.util.math.Vec3d;
 public class BackstabbingEnchantment extends Enchantment {
 
     public BackstabbingEnchantment() {
-        super(Rarity.COMMON, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
-    }
-
-    @Override
-    public boolean isAcceptableItem(ItemStack stack) {
-        return stack.getItem() instanceof KnifeItem;
+        super(Rarity.COMMON, EnchantmentsRegistry.KNIFE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
     }
 
     @Override

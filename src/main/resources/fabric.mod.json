@@ -3,6 +3,7 @@
   "id": "farmersdelight",
   "version": "${version}",
   "name": "Farmer's Delight",
+  "accessWidener": "farmersdelight.accesswidener",
   "description": "Fabric port for the awesome Farmer's Delight Forge mod!",
   "authors": [
     "Zifiv",
@@ -27,6 +28,9 @@
     ],
     "rei_plugins": [
       "com.nhoryzon.mc.farmersdelight.integration.rei.FarmersDelightModREI"
+    ],
+    "mm:early_risers":[
+      "com.nhoryzon.mc.farmersdelight.FarmersDelightEarlyRiser"
     ]
   },
   "mixins": [

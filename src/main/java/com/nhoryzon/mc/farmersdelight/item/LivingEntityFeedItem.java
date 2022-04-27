@@ -67,7 +67,7 @@ public abstract class LivingEntityFeedItem extends ConsumableItem {
                 effectDescription.append(" (").append(StatusEffectUtil.durationToString(effectInstance, 1.f)).append(")");
             }
 
-            tooltip.add(effectDescription.formatted(effect.getCategory().getFormatting()));
+            tooltip.add(effectDescription.formatted(effect.getType().getFormatting()));
         }
     }
 

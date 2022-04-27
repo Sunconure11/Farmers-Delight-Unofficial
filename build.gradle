@@ -3,6 +3,8 @@ plugins {
 	id 'maven-publish'
 	id 'fabric-loom' version '0.11-SNAPSHOT'
 	id 'net.researchgate.release' version '2.8.1'
+	id 'io.github.juuxel.loom-quiltflower' version '1.7.1'
+	id 'org.quiltmc.quilt-mappings-on-loom' version '4.0.0'
 	id 'org.sonarqube' version '3.2.0'
 }
 
@@ -16,17 +18,32 @@ group = project.maven_group
 repositories {
 	/* REI Integration */
 	maven { url "https://maven.shedaniel.me/" }
+	maven {
+		name = 'Quilt'
+		url = 'https://maven.quiltmc.org/repository/snapshot'
+	}
+	maven { url = "https://jitpack.io" }
 }
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	mappings(loom.layered {
+		addLayer(quiltMappings.mappings("org.quiltmc:quilt-mappings:${project.minecraft_version}+build.${project.quilt_mappings}:v2"))
+	})
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation("com.github.Chocohead:Fabric-ASM:v${project.fabric_asm_version}") {
+		exclude (group: "net.fabricmc.fabric-api")
+	}
+	include("com.github.Chocohead:Fabric-ASM:v${project.fabric_asm_version}")
 
 	/* REI Integration */
 	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}"
 	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
+}
+
+loom {
+	accessWidenerPath = file("src/main/resources/farmersdelight.accesswidener")
 }
 
 processResources {

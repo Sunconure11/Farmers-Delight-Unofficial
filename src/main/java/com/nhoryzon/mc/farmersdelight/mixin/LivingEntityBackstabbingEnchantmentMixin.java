@@ -25,7 +25,7 @@ public class LivingEntityBackstabbingEnchantmentMixin {
             ItemStack weapon = player.getMainHandStack();
             int level = EnchantmentHelper.getLevel(EnchantmentsRegistry.BACKSTABBING.get(), weapon);
             if (level > 0 && BackstabbingEnchantment.isLookingBehindTarget((LivingEntity)(Object)this, source.getPosition())) {
-                World world = attacker.getEntityWorld();
+                World world = attacker.getWorld();
                 if (!world.isClient()) {
                     world.playSound(null, attacker.getX(), attacker.getY(), attacker.getZ(), SoundEvents.ENTITY_PLAYER_ATTACK_CRIT, SoundCategory.BLOCKS, 1.f, 1.f);
 

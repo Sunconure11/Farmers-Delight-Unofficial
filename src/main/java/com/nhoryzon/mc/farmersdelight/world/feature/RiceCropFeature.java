@@ -21,7 +21,7 @@ public class RiceCropFeature extends Feature<RandomPatchFeatureConfig> {
     }
 
     @Override
-    public boolean generate(FeatureContext<RandomPatchFeatureConfig> context) {
+    public boolean place(FeatureContext<RandomPatchFeatureConfig> context) {
         StructureWorldAccess world = context.getWorld();
         BlockPos origin = context.getOrigin();
         RandomPatchFeatureConfig config = context.getConfig();
@@ -33,9 +33,9 @@ public class RiceCropFeature extends Feature<RandomPatchFeatureConfig> {
 
         for (int j = 0; j < config.tries(); ++j) {
             blockPosMutable.set(blockPos).move(
-                    random.nextInt(config.xzSpread() + 1) - random.nextInt(config.xzSpread() + 1),
-                    random.nextInt(config.ySpread() + 1) - random.nextInt(config.ySpread() + 1),
-                    random.nextInt(config.xzSpread() + 1) - random.nextInt(config.xzSpread() + 1));
+                    random.nextInt(config.spreadXz() + 1) - random.nextInt(config.spreadXz() + 1),
+                    random.nextInt(config.spreadY() + 1) - random.nextInt(config.spreadY() + 1),
+                    random.nextInt(config.spreadXz() + 1) - random.nextInt(config.spreadXz() + 1));
 
             if (world.getBlockState(blockPosMutable).getBlock() == Blocks.WATER && world.getBlockState(blockPosMutable.up()).getBlock() == Blocks.AIR) {
                 BlockState bottomRiceState = BlocksRegistry.WILD_RICE.get().getDefaultState().with(TallPlantBlock.HALF, DoubleBlockHalf.LOWER);

@@ -33,14 +33,14 @@ public class LivingEntityFeedItemEventListener implements UseEntityCallback {
                 livingEntityFeedItem.canFeed(itemStack, player, livingEntity, hand)) {
             livingEntity.setHealth(livingEntity.getMaxHealth());
             livingEntityFeedItem.getStatusEffectApplied().forEach(effect -> livingEntity.addStatusEffect(new StatusEffectInstance(effect)));
-            livingEntity.getEntityWorld().playSound(null, entity.getBlockPos(), SoundEvents.ENTITY_GENERIC_EAT, SoundCategory.PLAYERS, .8f,
+            livingEntity.getWorld().playSound(null, entity.getBlockPos(), SoundEvents.ENTITY_GENERIC_EAT, SoundCategory.PLAYERS, .8f,
                     .8f);
 
             for (int i = 0; i < 5; ++i) {
                 double d0 = MathUtils.RAND.nextGaussian() * .02d;
                 double d1 = MathUtils.RAND.nextGaussian() * .02d;
                 double d2 = MathUtils.RAND.nextGaussian() * .02d;
-                livingEntity.getEntityWorld().addParticle(ParticleTypesRegistry.STAR.get(), livingEntity.getParticleX(1.d),
+                livingEntity.getWorld().addParticle(ParticleTypesRegistry.STAR.get(), livingEntity.getParticleX(1.d),
                         livingEntity.getRandomBodyY() + .5d, livingEntity.getParticleZ(1.d), d0, d1, d2);
             }
 

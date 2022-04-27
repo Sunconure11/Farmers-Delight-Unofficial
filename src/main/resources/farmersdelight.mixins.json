@@ -10,15 +10,15 @@
     "CropBlockOnRichSoilFarmlandMixin",
     "DeadBushBlockOnRichSoilMixin",
     "EnchantmentHelperEnhancementMixin",
+    "EnchantmentTargetMixin",
     "LivingEntityBackstabbingEnchantmentMixin",
-    "LivingEntityComfortImmunitiesMixin",
     "LivingEntityKnivesKnockBackMixin",
     "LivingEntityOnUseItemFinishMixin",
     "PigEntityBreedingMixin",
     "PlantBlockOnRichSoilMixin",
     "StemBlockOnRichSoilFarmlandMixin",
-    "accessors.PlayerExhaustionAccessorMixin",
-    "accessors.DispenserBehaviorsAccessorMixin"
+    "accessors.DispenserBehaviorsAccessorMixin",
+    "accessors.PlayerExhaustionAccessorMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -113,7 +113,7 @@ public class StoveBlockEntity extends BlockEntity implements Clearable {
     @Nullable
     @Override
     public Packet<ClientPlayPacketListener> toUpdatePacket() {
-        return BlockEntityUpdateS2CPacket.create(this);
+        return BlockEntityUpdateS2CPacket.of(this);
     }
 
     @Override

@@ -1,8 +1,10 @@
 package com.nhoryzon.mc.farmersdelight.registry;
 
+import com.chocohead.mm.api.ClassTinkerers;
 import com.nhoryzon.mc.farmersdelight.FarmersDelightMod;
 import com.nhoryzon.mc.farmersdelight.enchantment.BackstabbingEnchantment;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -10,6 +12,7 @@ import java.util.function.Supplier;
 
 public enum EnchantmentsRegistry {
     BACKSTABBING("backstabbing", BackstabbingEnchantment::new);
+    public static final EnchantmentTarget KNIFE = ClassTinkerers.getEnum(EnchantmentTarget.class, "KNIFE");
 
     private final String pathName;
     private final Supplier<? extends Enchantment> enchantmentSupplier;
