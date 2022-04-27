@@ -2,16 +2,18 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "farmersdelight:raw_pasta_from_water"
+      "farmersdelight:melon_juice"
     ]
   },
   "criteria": {
-    "has_wheat": {
+    "has_melon_slice": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:wheat"]
+            "items": [
+              "minecraft:melon_slice"
+            ]
           }
         ]
       }
@@ -19,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "farmersdelight:raw_pasta_from_water"
+        "recipe": "farmersdelight:melon_juice"
       }
     }
   },
   "requirements": [
     [
-      "has_wheat",
+      "has_melon_slice",
       "has_the_recipe"
     ]
   ]

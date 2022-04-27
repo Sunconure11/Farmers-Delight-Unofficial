@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "farmersdelight:oak_pantry"
+      "farmersdelight:oak_cabinet"
     ]
   },
   "criteria": {
@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:oak_trapdoor"]
+            "items": [
+              "minecraft:oak_trapdoor"
+            ]
           }
         ]
       }
@@ -19,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "farmersdelight:oak_pantry"
+        "recipe": "farmersdelight:oak_cabinet"
       }
     }
   },

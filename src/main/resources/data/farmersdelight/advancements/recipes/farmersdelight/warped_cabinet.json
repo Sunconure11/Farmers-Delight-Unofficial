@@ -2,16 +2,18 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "farmersdelight:dark_oak_pantry"
+      "farmersdelight:warped_cabinet"
     ]
   },
   "criteria": {
-    "has_dark_oak_trapdoor": {
+    "has_warped_trapdoor": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:dark_oak_trapdoor"]
+            "items": [
+              "minecraft:warped_trapdoor"
+            ]
           }
         ]
       }
@@ -19,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "farmersdelight:dark_oak_pantry"
+        "recipe": "farmersdelight:warped_cabinet"
       }
     }
   },
   "requirements": [
     [
-      "has_dark_oak_trapdoor",
+      "has_warped_trapdoor",
       "has_the_recipe"
     ]
   ]

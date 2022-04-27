@@ -2,16 +2,18 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "farmersdelight:raw_pasta_from_eggs"
+      "farmersdelight:birch_cabinet"
     ]
   },
   "criteria": {
-    "has_wheat": {
+    "has_birch_trapdoor": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:wheat"]
+            "items": [
+              "minecraft:birch_trapdoor"
+            ]
           }
         ]
       }
@@ -19,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "farmersdelight:raw_pasta_from_eggs"
+        "recipe": "farmersdelight:birch_cabinet"
       }
     }
   },
   "requirements": [
     [
-      "has_wheat",
+      "has_birch_trapdoor",
       "has_the_recipe"
     ]
   ]

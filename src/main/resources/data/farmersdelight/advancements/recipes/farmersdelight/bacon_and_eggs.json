@@ -2,16 +2,18 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "farmersdelight:crimson_pantry"
+      "farmersdelight:bacon_and_eggs"
     ]
   },
   "criteria": {
-    "has_crimson_trapdoor": {
+    "has_bacon": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:crimson_trapdoor"]
+            "items": [
+              "farmersdelight:cooked_bacon"
+            ]
           }
         ]
       }
@@ -19,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "farmersdelight:crimson_pantry"
+        "recipe": "farmersdelight:bacon_and_eggs"
       }
     }
   },
   "requirements": [
     [
-      "has_crimson_trapdoor",
+      "has_bacon",
       "has_the_recipe"
     ]
   ]

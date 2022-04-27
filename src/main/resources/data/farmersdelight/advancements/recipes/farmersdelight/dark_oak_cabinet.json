@@ -2,16 +2,18 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "farmersdelight:birch_pantry"
+      "farmersdelight:dark_oak_cabinet"
     ]
   },
   "criteria": {
-    "has_birch_trapdoor": {
+    "has_dark_oak_trapdoor": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:birch_trapdoor"]
+            "items": [
+              "minecraft:dark_oak_trapdoor"
+            ]
           }
         ]
       }
@@ -19,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "farmersdelight:birch_pantry"
+        "recipe": "farmersdelight:dark_oak_cabinet"
       }
     }
   },
   "requirements": [
     [
-      "has_birch_trapdoor",
+      "has_dark_oak_trapdoor",
       "has_the_recipe"
     ]
   ]

@@ -2,16 +2,18 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "farmersdelight:jungle_pantry"
+      "farmersdelight:skillet"
     ]
   },
   "criteria": {
-    "has_jungle_trapdoor": {
+    "has_brick": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:jungle_trapdoor"]
+            "items": [
+              "minecraft:brick"
+            ]
           }
         ]
       }
@@ -19,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "farmersdelight:jungle_pantry"
+        "recipe": "farmersdelight:skillet"
       }
     }
   },
   "requirements": [
     [
-      "has_jungle_trapdoor",
+      "has_brick",
       "has_the_recipe"
     ]
   ]

@@ -2,16 +2,18 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "farmersdelight:acacia_pantry"
+      "farmersdelight:red_canvas_sign"
     ]
   },
   "criteria": {
-    "has_acacia_trapdoor": {
+    "has_canvas_sign": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:acacia_trapdoor"]
+            "items": [
+              "farmersdelight:canvas_sign"
+            ]
           }
         ]
       }
@@ -19,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "farmersdelight:acacia_pantry"
+        "recipe": "farmersdelight:red_canvas_sign"
       }
     }
   },
   "requirements": [
     [
-      "has_acacia_trapdoor",
+      "has_canvas_sign",
       "has_the_recipe"
     ]
   ]

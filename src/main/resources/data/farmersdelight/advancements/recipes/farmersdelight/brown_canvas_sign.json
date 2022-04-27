@@ -2,16 +2,18 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "farmersdelight:spruce_pantry"
+      "farmersdelight:brown_canvas_sign"
     ]
   },
   "criteria": {
-    "has_spruce_trapdoor": {
+    "has_canvas_sign": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:spruce_trapdoor"]
+            "items": [
+              "farmersdelight:canvas_sign"
+            ]
           }
         ]
       }
@@ -19,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "farmersdelight:spruce_pantry"
+        "recipe": "farmersdelight:brown_canvas_sign"
       }
     }
   },
   "requirements": [
     [
-      "has_spruce_trapdoor",
+      "has_canvas_sign",
       "has_the_recipe"
     ]
   ]
